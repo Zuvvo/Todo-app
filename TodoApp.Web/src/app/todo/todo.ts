@@ -30,7 +30,6 @@ export class Todo {
   getTodos() {
   this.todoService.getTodos().subscribe(
     (response) => {
-      console.log(response);
       this.todos = response;
     },
     (error) => {

@@ -20,12 +20,6 @@ namespace TodoApp.Controllers
         public async Task<ActionResult<List<TodoDTO>>> GetTodos()
         {
             var todos = await _todoService.GetAllTodos();
-
-            if (todos.Count == 0)
-            {
-                return NotFound("No todos found.");
-            }
-
             return Ok(todos);
         }
 

@@ -12,3 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
   ]
 };
+
+export const API_CONFIG = {
+  baseUrl: 'https://localhost:44314/api'
+};

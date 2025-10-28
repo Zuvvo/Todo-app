@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AddTodoDTO } from '../dto/addTodoDTO';
 import { UpdateTodoDTO } from '../dto/updateTodoDTO';
 import { TodoDTO } from '../dto/todoDTO';
+import { API_CONFIG } from '../app.config';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ import { TodoDTO } from '../dto/todoDTO';
 
 
 export class TodoService {
-  private apiUrl = 'https://localhost:44314/api';
+  private apiUrl = API_CONFIG.baseUrl;
 
   constructor(private http: HttpClient) { }
 
