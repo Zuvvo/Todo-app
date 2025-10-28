@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { TodosComponent } from './todos/todos.component';
+import { Todo } from './todo/todo';
 
 export const routes: Routes = [
-  { path: '', component: TodosComponent },
+  { path: '', redirectTo: '/todo', pathMatch: 'full' },
+  { path: 'todo', component: Todo },
 ];
