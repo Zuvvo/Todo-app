@@ -10,6 +10,7 @@ This is a simple Todo application built with ASP.NET Core (.NET 8) and Entity Fr
 3. Make sure the build configuration is set to **Debug** (not Release).
 4. Press **F5** or click the **Start Debugging** button to run API.
 5. To run the Angular client, open a terminal, navigate to `TodoApplication\TodoApp.Web`, and run the command: **ng serve**.
+6. Go to `http://localhost:4200/` in your web browser to access the application.
 
 ### Prerequisites
 
@@ -20,4 +21,4 @@ This is a simple Todo application built with ASP.NET Core (.NET 8) and Entity Fr
 ### Database Configuration
 
 The application uses a PostgreSQL database.  
-You must set the correct connection string in `appsettings.Development.json`:
+You must set the correct connection string in `appsettings.Development.json`
