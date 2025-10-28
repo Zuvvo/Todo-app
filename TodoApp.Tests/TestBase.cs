@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using TodoApp.DAL.Data;
+using TodoApp.Infrastructure.Interfaces;
 using TodoApp.Infrastructure.Services;
 
 public class TestBase
@@ -11,12 +12,10 @@ public class TestBase
     {
         var services = new ServiceCollection();
 
-        // Add DbContext with InMemory provider
         services.AddDbContext<AppDbContext>(options =>
-            options.UseInMemoryDatabase("TestDatabase"));
+            options.UseInMemoryDatabase("TestDb"));
 
-        // Add services
-        services.AddScoped<TodoService>();
+        services.AddScoped<ITodoService, TodoService>();
 
         ServiceProvider = services.BuildServiceProvider();
     }
